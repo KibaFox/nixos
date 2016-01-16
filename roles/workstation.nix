@@ -11,6 +11,10 @@ let
   ) {};
 in
 {
+  environment.variables = {
+    EDITOR = "nvim";
+  };
+
   environment.systemPackages = [
     # Shells / Terminal
     pkgs.bash
