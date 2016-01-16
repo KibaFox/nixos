@@ -1,27 +1,40 @@
 { config, pkgs, ... }:
 
+let
+  neopkgs = import (
+    pkgs.fetchFromGitHub {
+      owner = "NixOS";
+      repo = "nixpkgs";
+      rev = "8f793ce6bb050252e92a987cc3c5bd48d5423a42";
+      sha256 = "0fydxirp79s4svr2gadp3hsx2vrank904n8c5kprqh3jrzid90cg";
+    }
+  ) {};
+in
 {
-  environment.systemPackages = with pkgs; [
+  environment.systemPackages = [
     # Shells / Terminal
-    bash
-    fish
-    tmux
+    pkgs.bash
+    pkgs.fish
+    pkgs.tmux
+
+    # Editor
+    neopkgs.neovim
 
     # Source control
-    git
+    pkgs.git
 
     # Web
-    wget
-    curl
-    lynx
+    pkgs.wget
+    pkgs.curl
+    pkgs.lynx
 
     # SSH
-    mosh
+    pkgs.mosh
 
     # Email
-    isync
+    pkgs.isync
 
     # Interpreters
-    python    
+    pkgs.python
   ];
 }
