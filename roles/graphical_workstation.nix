@@ -48,6 +48,5 @@
 
     # Tools
     pkgs.dmenu
-    pkgs.xlock
   ];
 }
