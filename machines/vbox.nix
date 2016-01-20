@@ -29,7 +29,7 @@
   imports = [
     ../common.nix
     ../roles/workstation.nix
-    #../roles/graphical_workstation.nix
+    ../roles/graphical_workstation.nix
   ];
 
   networking = {
