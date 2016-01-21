@@ -43,5 +43,8 @@ in
 
     # Search
     pkgs.silver-searcher
+
+    # Some programs depend on which being available
+    pkgs.which
   ];
 }
