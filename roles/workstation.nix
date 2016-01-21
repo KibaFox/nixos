@@ -40,5 +40,8 @@ in
 
     # Interpreters
     pkgs.python
+
+    # Search
+    pkgs.silver-searcher
   ];
 }
