@@ -46,7 +46,13 @@
     # Terminal
     pkgs.st
 
-    # Tools
+    # Menu
     pkgs.dmenu
+
+    # Clipboard
+    pkgs.xsel
+
+    # Graphical lock
+    pkgs.i3lock
   ];
 }
