@@ -46,5 +46,9 @@ in
 
     # Some programs depend on which being available
     pkgs.which
+
+    # Performance and monitoring tools
+    pkgs.psmisc # includes killall
+    pkgs.htop
   ];
 }
