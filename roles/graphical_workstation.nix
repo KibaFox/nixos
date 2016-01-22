@@ -52,7 +52,16 @@
     # Clipboard
     pkgs.xsel
 
+    # Fake keyboard/mouse input, window management, and more
+    pkgs.xdotool
+
     # Graphical lock
     pkgs.i3lock
+
+    # Screenshot tool
+    pkgs.maim
+
+    # Image viewer
+    pkgs.sxiv
   ];
 }
