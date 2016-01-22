@@ -11,6 +11,10 @@
       defaultUser = "kiba";
     };
 
+    displayManager.sessionCommands = ''
+      ${pkgs.redshift}/bin/redshift &
+    '';
+
     desktopManager = {
       # Disable the defaults.  Don't use a desktop manager or xterm.
       default = "none";
@@ -63,5 +67,8 @@
 
     # Image viewer
     pkgs.sxiv
+
+    # Save my eyes at night with Redshift
+    pkgs.redshift
   ];
 }
