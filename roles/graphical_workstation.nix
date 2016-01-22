@@ -27,6 +27,12 @@
     };
   };
 
+  # Hide the mouse cursor when not in use
+  services.unclutter = {
+    enable = true;
+    arguments = "-idle 2";
+  };
+
   # Fonts to include
   fonts.fonts = [
     pkgs.corefonts # Microsoft free fonts
