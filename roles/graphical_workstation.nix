@@ -76,5 +76,11 @@
 
     # Save my eyes at night with Redshift
     pkgs.redshift
+
+    # Password store
+    pkgs.keepassx2
+
+    # Sync
+    pkgs.dropbox-cli
   ];
 }
