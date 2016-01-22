@@ -30,7 +30,7 @@
   # Hide the mouse cursor when not in use
   services.unclutter = {
     enable = true;
-    arguments = "-idle 2";
+    arguments = "-idle 2 -noevents";
   };
 
   # Fonts to include
