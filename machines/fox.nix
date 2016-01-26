@@ -32,7 +32,7 @@
     "kvm-intel"
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_4_2;
+  boot.kernelPackages = pkgs.linuxPackages_4_3;
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";
