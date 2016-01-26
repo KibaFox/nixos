@@ -50,5 +50,8 @@ in
     # Performance and monitoring tools
     pkgs.psmisc # includes killall
     pkgs.htop
+
+    # Common net utils
+    pkgs.inetutils
   ];
 }
