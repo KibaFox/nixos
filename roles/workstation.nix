@@ -53,5 +53,8 @@ in
 
     # Common net utils
     pkgs.inetutils
+
+    # Password generator
+    pkgs.pwgen
   ];
 }
