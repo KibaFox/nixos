@@ -53,5 +53,8 @@ in
 
     # Common net utils
     pkgs.inetutils
+
+    # Text tools
+    pkgs.dos2unix
   ];
 }
