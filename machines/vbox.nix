@@ -15,7 +15,6 @@
 
   networking = {
     hostName = "vbox";
-    enableIPv6 = false;
   };
 
   boot.initrd.availableKernelModules = [

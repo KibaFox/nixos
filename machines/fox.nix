@@ -15,7 +15,6 @@
 
   networking = {
     hostName = "fox";
-    enableIPv6 = false;
   };
 
   boot.initrd.availableKernelModules = [
