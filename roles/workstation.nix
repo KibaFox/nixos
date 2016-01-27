@@ -24,7 +24,7 @@ in
     pkgs.git              # Source control
     pkgs.htop
     pkgs.inetutils        # Common net utils
-    pkgs.isync            # Email MTA that is an alternative to OfflineIMAP
+    pkgs.isync            # Email sync, an alternative to OfflineIMAP
     pkgs.lynx
     pkgs.mosh             # The mobile shell
     pkgs.psmisc           # includes killall
