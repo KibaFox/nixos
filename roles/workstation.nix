@@ -16,48 +16,23 @@ in
   };
 
   environment.systemPackages = [
-    # Shells / Terminal
+    neopkgs.neovim        # Neovim, my editor of choice
     pkgs.bash
-    pkgs.fish
-    pkgs.tmux
-
-    # Editor
-    neopkgs.neovim
-
-    # Source control
-    pkgs.git
-
-    # Web
-    pkgs.wget
     pkgs.curl
-    pkgs.lynx
-
-    # SSH
-    pkgs.mosh
-
-    # Email
-    pkgs.isync
-
-    # Interpreters
-    pkgs.python
-
-    # Search
-    pkgs.silver-searcher
-
-    # Some programs depend on which being available
-    pkgs.which
-
-    # Performance and monitoring tools
-    pkgs.psmisc # includes killall
+    pkgs.dos2unix         # Convert between dos and unix line endings
+    pkgs.fish
+    pkgs.git              # Source control
     pkgs.htop
-
-    # Common net utils
-    pkgs.inetutils
-
-    # Text tools
-    pkgs.dos2unix
-
-    # Password generator
-    pkgs.pwgen
+    pkgs.inetutils        # Common net utils
+    pkgs.isync            # Email MTA that is an alternative to OfflineIMAP
+    pkgs.lynx
+    pkgs.mosh             # The mobile shell
+    pkgs.psmisc           # includes killall
+    pkgs.pwgen            # Password generator
+    pkgs.python
+    pkgs.silver-searcher
+    pkgs.tmux
+    pkgs.wget
+    pkgs.which            # Some programs depend on this
   ];
 }

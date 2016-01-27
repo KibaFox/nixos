@@ -49,38 +49,17 @@
   };
 
   environment.systemPackages = [
-    # Browsers
     pkgs.chromium
-    pkgs.firefox
-
-    # Terminal
-    pkgs.st
-
-    # Menu
     pkgs.dmenu
-
-    # Clipboard
-    pkgs.xsel
-
-    # Fake keyboard/mouse input, window management, and more
-    pkgs.xdotool
-
-    # Graphical lock
+    pkgs.dropbox-cli    # File sync
+    pkgs.firefox
     pkgs.i3lock
-
-    # Screenshot tool
-    pkgs.maim
-
-    # Image viewer
-    pkgs.sxiv
-
-    # Save my eyes at night with Redshift
-    pkgs.redshift
-
-    # Password store
-    pkgs.keepassx2
-
-    # Sync
-    pkgs.dropbox-cli
+    pkgs.keepassx2      # Password store
+    pkgs.maim           # Screenshot tool
+    pkgs.redshift       # Save my eyes at night
+    pkgs.st             # Simple terminal
+    pkgs.sxiv           # Image viewer
+    pkgs.xdotool        # Fake keyboard/mouse input, window management, and more
+    pkgs.xsel           # Clipboard manipulation
   ];
 }
