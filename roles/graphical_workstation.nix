@@ -51,15 +51,15 @@
   environment.systemPackages = [
     pkgs.chromium
     pkgs.dmenu
-    pkgs.dropbox-cli    # File sync
+    pkgs.dropbox-cli      # File sync
     pkgs.firefox
     pkgs.i3lock
-    pkgs.keepassx2      # Password store
-    pkgs.maim           # Screenshot tool
-    pkgs.redshift       # Save my eyes at night
-    pkgs.st             # Simple terminal
-    pkgs.sxiv           # Image viewer
-    pkgs.xdotool        # Fake keyboard/mouse input, window management, and more
-    pkgs.xsel           # Clipboard manipulation
+    pkgs.keepassx2        # Password store
+    pkgs.maim             # Screenshot tool
+    pkgs.redshift         # Save my eyes at night
+    pkgs.st               # Simple terminal
+    pkgs.sxiv             # Image viewer
+    pkgs.xdotool          # Fake keyboard/mouse input, window management
+    pkgs.xsel             # Clipboard manipulation
   ];
 }
