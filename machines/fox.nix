@@ -11,6 +11,7 @@
     ../common.nix
     ../roles/workstation.nix
     ../roles/graphical_workstation.nix
+    ../roles/wine_user.nix
   ];
 
   networking = {
