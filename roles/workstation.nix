@@ -23,7 +23,6 @@ in
     pkgs.fish
     pkgs.git              # Source control
     pkgs.htop
-    pkgs.inetutils        # Common net utils
     pkgs.isync            # Email sync, an alternative to OfflineIMAP
     pkgs.lynx
     pkgs.mosh             # The mobile shell
