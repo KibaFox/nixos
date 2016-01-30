@@ -11,6 +11,7 @@
     ../common.nix
     ../roles/workstation.nix
     ../roles/graphical_workstation.nix
+    ../roles/gamer.nix
     ../roles/wine_user.nix
   ];
 
@@ -39,6 +40,11 @@
     fsType = "btrfs";
     options = "noatime,discard,compress=lzo,space_cache";
   };
+
+  # Install proprietary NVIDIA driver
+  services.xserver.videoDrivers = [ "nvidia" ];
+
+  nixpkgs.config.allowUnfree = true;
 
   nix.maxJobs = 8;
 }
