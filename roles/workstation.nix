@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 
 let
-  neopkgs = pkgs.callPackage ../mypkgs/neopkgs.nix { };
+  neopkgs = import ../mypkgs/neopkgs.nix { };
 in
 {
   environment.variables = {
