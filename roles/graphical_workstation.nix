@@ -49,6 +49,7 @@
   };
 
   environment.systemPackages = [
+    (pkgs.st.override { conf = builtins.readFile ../config/st/config.def.h; })
     pkgs.chromium
     pkgs.dmenu
     pkgs.dropbox-cli      # File sync
@@ -57,7 +58,6 @@
     pkgs.keepassx2        # Password store
     pkgs.maim             # Screenshot tool
     pkgs.redshift         # Save my eyes at night
-    pkgs.st               # Simple terminal
     pkgs.sxiv             # Image viewer
     pkgs.xdotool          # Fake keyboard/mouse input, window management
     pkgs.xsel             # Clipboard manipulation
