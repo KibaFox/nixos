@@ -3,7 +3,6 @@
 # Uses Btrfs on the whole disk for simplicity.
 # See `../doc/btrfs_whole_disk.md` for setup details.
 
-
 { config, lib, pkgs, ... }:
 
 {
@@ -25,6 +24,8 @@
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_4_3;
+
+  boot.loader.grub.device = "/dev/sda";
 
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";

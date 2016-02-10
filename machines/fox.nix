@@ -35,6 +35,8 @@
 
   boot.kernelPackages = pkgs.linuxPackages_4_3;
 
+  boot.loader.grub.device = "/dev/sda";
+
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";
     fsType = "btrfs";
