@@ -34,6 +34,7 @@ in
     pkgs.isync            # Email sync, an alternative to OfflineIMAP
     pkgs.lynx
     pkgs.mosh             # The mobile shell
+    pkgs.pngnq            # Lossy PNG compressor
     pkgs.psmisc           # includes killall
     pkgs.pwgen            # Password generator
     pkgs.python
