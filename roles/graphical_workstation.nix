@@ -55,7 +55,7 @@
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
     pkgs.i3lock
-    pkgs.keepassx2        # Password store
+    pkgs.keepass          # Password store
     pkgs.maim             # Screenshot tool
     pkgs.redshift         # Save my eyes at night
     pkgs.sxiv             # Image viewer
