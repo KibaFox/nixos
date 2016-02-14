@@ -57,6 +57,7 @@
     pkgs.i3lock
     pkgs.keepass          # Password store
     pkgs.maim             # Screenshot tool
+    pkgs.pinta            # Drawing/editing program modeled after Paint.NET
     pkgs.redshift         # Save my eyes at night
     pkgs.sxiv             # Image viewer
     pkgs.xdotool          # Fake keyboard/mouse input, window management
