@@ -1,5 +1,8 @@
 { config, pkgs, ... }:
 
+let
+  custompkgs = import ../mypkgs/custompkgs.nix { };
+in
 {
   services.xserver = {
     enable = true;
@@ -49,7 +52,7 @@
   };
 
   environment.systemPackages = [
-    (pkgs.st.override { conf = builtins.readFile ../config/st/config.def.h; })
+    custompkgs.st
     pkgs.chromium
     pkgs.dmenu
     pkgs.dropbox-cli      # File sync
