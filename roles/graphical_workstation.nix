@@ -58,7 +58,7 @@ in
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
     pkgs.i3lock
-    pkgs.keepass          # Password store
+    pkgs.keepassx2        # Password store
     pkgs.maim             # Screenshot tool
     pkgs.pinta            # Drawing/editing program modeled after Paint.NET
     pkgs.redshift         # Save my eyes at night
