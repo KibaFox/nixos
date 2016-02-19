@@ -1,3 +1,5 @@
+# The gamer role sets up the computer to run games.
+
 { config, pkgs, ... }:
 
 let

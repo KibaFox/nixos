@@ -1,3 +1,6 @@
+# The workstation role configures a machine with settings and command line tools
+# expected to be on a workstation meant to get things done!
+
 { config, pkgs, ... }:
 
 let

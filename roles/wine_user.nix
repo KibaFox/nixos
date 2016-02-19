@@ -1,3 +1,5 @@
+# Install Wine so some Windows programs can be run
+
 { config, pkgs, ... }:
 
 {
