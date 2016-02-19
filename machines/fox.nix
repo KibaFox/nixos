@@ -12,6 +12,7 @@
     ../roles/workstation.nix
     ../roles/graphical_workstation.nix
     ../roles/gamer.nix
+    ../roles/redshift.nix
     ../roles/wine_user.nix
   ];
 

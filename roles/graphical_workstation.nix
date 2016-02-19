@@ -14,10 +14,6 @@ in
       defaultUser = "kiba";
     };
 
-    displayManager.sessionCommands = ''
-      ${pkgs.redshift}/bin/redshift &
-    '';
-
     desktopManager = {
       # Disable the defaults.  Don't use a desktop manager or xterm.
       default = "none";
@@ -61,7 +57,6 @@ in
     pkgs.keepassx2        # Password store
     pkgs.maim             # Screenshot tool
     pkgs.pinta            # Drawing/editing program modeled after Paint.NET
-    pkgs.redshift         # Save my eyes at night
     pkgs.sxiv             # Image viewer
     pkgs.xdotool          # Fake keyboard/mouse input, window management
     pkgs.xsel             # Clipboard manipulation
