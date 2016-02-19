@@ -8,12 +8,7 @@
 {
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-    ../common.nix
-    ../roles/workstation.nix
-    ../roles/graphical_workstation.nix
-    ../roles/gamer.nix
-    ../roles/redshift.nix
-    ../roles/wine_user.nix
+    ../bundles/desktop.nix
   ];
 
   networking = {
