@@ -53,6 +53,7 @@ in
   environment.systemPackages = [
     custompkgs.st
     pkgs.chromium
+    pkgs.conky
     pkgs.dmenu
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
