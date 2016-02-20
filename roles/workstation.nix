@@ -30,6 +30,7 @@ in
     neopkgs.fish
     neopkgs.neovim        # Neovim, my editor of choice
     pkgs.bash
+    pkgs.ctags
     pkgs.curl
     pkgs.dos2unix         # Convert between dos and unix line endings
     pkgs.git              # Source control
@@ -41,6 +42,7 @@ in
     pkgs.psmisc           # includes killall
     pkgs.pwgen            # Password generator
     pkgs.python
+    pkgs.python3
     pkgs.silver-searcher
     pkgs.tmux
     pkgs.wget
