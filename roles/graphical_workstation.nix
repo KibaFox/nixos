@@ -38,6 +38,7 @@ in
   # Fonts to include
   fonts.fonts = [
     pkgs.corefonts # Microsoft free fonts
+    pkgs.dina-font
     pkgs.source-code-pro
     pkgs.source-sans-pro
     pkgs.source-serif-pro
@@ -63,6 +64,7 @@ in
     pkgs.pinta            # Drawing/editing program modeled after Paint.NET
     pkgs.sxiv             # Image viewer
     pkgs.xdotool          # Fake keyboard/mouse input, window management
+    pkgs.xfontsel         # X11 font selection tool
     pkgs.xsel             # Clipboard manipulation
   ];
 
