@@ -5,6 +5,7 @@
 
 let
   custompkgs = import ../mypkgs/custompkgs.nix { };
+  neopkgs = import ../mypkgs/neopkgs.nix { };
 in
 {
   services.xserver = {
@@ -53,8 +54,8 @@ in
 
   environment.systemPackages = [
     custompkgs.st
+    neopkgs.conky
     pkgs.chromium
-    pkgs.conky
     pkgs.dmenu
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
