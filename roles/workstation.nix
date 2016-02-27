@@ -36,7 +36,6 @@ in
     pkgs.git              # Source control
     pkgs.htop
     pkgs.isync            # Email sync, an alternative to OfflineIMAP
-    pkgs.lynx
     pkgs.mosh             # The mobile shell
     pkgs.pandoc           # Universal document converter
     pkgs.pngnq            # Lossy PNG compressor
