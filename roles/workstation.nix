@@ -22,6 +22,9 @@ in
     defaultLocale = "en_US.UTF-8";
   };
 
+  # Automatically upgrade for easier maintenance
+  system.autoUpgrade.enable = true;
+
   environment.variables = {
     EDITOR = "nvim";
   };
