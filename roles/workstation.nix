@@ -33,6 +33,7 @@ in
     neopkgs.fish
     neopkgs.neovim        # Neovim, my editor of choice
     pkgs.bash
+    pkgs.bind             # Provides nslookup, dig
     pkgs.ctags
     pkgs.curl
     pkgs.dos2unix         # Convert between dos and unix line endings
