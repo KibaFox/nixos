@@ -36,25 +36,49 @@
   fileSystems."/" = {
     device = "/dev/disk/by-label/root";
     fsType = "btrfs";
-    options = "ssd,noatime,discard,compress=lzo,space_cache";
+    options = [
+      "ssd"
+      "noatime"
+      "discard"
+      "compress=lzo"
+      "space_cache"
+    ];
   };
 
   fileSystems."/home" = {
     device = "/dev/disk/by-label/hdd";
     fsType = "btrfs";
-    options = "subvol=/home,noatime,discard,compress=lzo,space_cache";
+    options = [
+      "subvol=/home"
+      "noatime"
+      "discard"
+      "compress=lzo"
+      "space_cache"
+    ];
   };
 
   fileSystems."/var" = {
     device = "/dev/disk/by-label/hdd";
     fsType = "btrfs";
-    options = "subvol=/var,noatime,discard,compress=lzo,space_cache";
+    options = [
+      "subvol=/var"
+      "noatime"
+      "discard"
+      "compress=lzo"
+      "space_cache"
+    ];
   };
 
   fileSystems."/tmp" = {
     device = "/dev/disk/by-label/hdd";
     fsType = "btrfs";
-    options = "subvol=/tmp,noatime,discard,compress=lzo,space_cache";
+    options = [
+      "subvol=/tmp"
+      "noatime"
+      "discard"
+      "compress=lzo"
+      "space_cache"
+    ];
   };
 
   # Install proprietary NVIDIA driver

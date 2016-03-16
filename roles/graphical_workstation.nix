@@ -3,10 +3,6 @@
 
 { config, pkgs, ... }:
 
-let
-  custompkgs = import ../mypkgs/custompkgs.nix { };
-  neopkgs = import ../mypkgs/neopkgs.nix { };
-in
 {
   services.xserver = {
     enable = true;
@@ -52,10 +48,10 @@ in
   };
 
   environment.systemPackages = [
-    custompkgs.st
-    neopkgs.conky
-    neopkgs.dmenu         # Fast and lightweight dynamic menu for X
+    (pkgs.st.override { conf = builtins.readFile ../config/st/config.def.h; })
     pkgs.chromium
+    pkgs.conky
+    pkgs.dmenu            # Fast and lightweight dynamic menu for X
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
     pkgs.i3lock

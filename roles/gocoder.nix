@@ -2,11 +2,8 @@
 
 { config, pkgs, ... }:
 
-let
-  neopkgs = import ../mypkgs/neopkgs.nix {};
-in
 {
   environment.systemPackages = [
-    neopkgs.go
+    pkgs.go
   ];
 }

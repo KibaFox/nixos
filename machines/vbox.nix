@@ -28,7 +28,12 @@
   fileSystems."/" = {
     device = "/dev/disk/by-label/nixos";
     fsType = "btrfs";
-    options = "noatime,discard,compress=lzo,space_cache";
+    options = [
+      "noatime"
+      "discard"
+      "compress=lzo"
+      "space_cache"
+    ];
   };
 
   nix.maxJobs = 4;
