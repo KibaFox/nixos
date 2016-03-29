@@ -6,6 +6,7 @@
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ../bundles/vdesktop.nix
+    ../roles/redshift.nix
   ];
 
   networking = {
