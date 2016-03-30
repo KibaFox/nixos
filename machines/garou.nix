@@ -51,6 +51,11 @@
     { device = "/dev/mapper/garou1-swap"; }
   ];
 
+  hardware.trackpoint = {
+    enable = true;
+    fakeButtons = true;
+  };
+
   nixpkgs.config.allowUnfree = true;
 
   nix.maxJobs = 4;
