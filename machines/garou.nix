@@ -24,6 +24,11 @@
 
   boot.kernelModules = [
     "kvm-intel"
+    "tp_smapi"
+  ];
+
+  boot.extraModulePackages = [
+    config.boot.kernelPackages.tp_smapi
   ];
 
   boot.kernelPackages = pkgs.linuxPackages_4_3;
