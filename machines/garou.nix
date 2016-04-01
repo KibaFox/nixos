@@ -59,6 +59,7 @@
   hardware.trackpoint = {
     enable = true;
     fakeButtons = true;
+    emulateWheel = true;
   };
 
   nixpkgs.config.allowUnfree = true;
