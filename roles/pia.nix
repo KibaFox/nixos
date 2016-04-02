@@ -7,7 +7,6 @@
 
 {
   services.openvpn = {
-    enable = true;
     servers = {
       us-east = {
         config = ''

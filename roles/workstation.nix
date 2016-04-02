@@ -30,17 +30,17 @@ in
   };
 
   environment.systemPackages = [
-    neopkgs.fish
-    neopkgs.neovim        # Neovim, my editor of choice
     pkgs.bash
     pkgs.bind             # Provides nslookup, dig
     pkgs.ctags
     pkgs.curl
     pkgs.dos2unix         # Convert between dos and unix line endings
+    pkgs.fish
     pkgs.git              # Source control
     pkgs.htop
     pkgs.isync            # Email sync, an alternative to OfflineIMAP
     pkgs.mosh             # The mobile shell
+    pkgs.neovim           # Neovim, my editor of choice
     pkgs.pandoc           # Universal document converter
     pkgs.pngnq            # Lossy PNG compressor
     pkgs.psmisc           # includes killall

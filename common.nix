@@ -7,5 +7,5 @@
     pkgs.git
   ];
 
-  system.stateVersion = "15.09";
+  system.stateVersion = "16.03";
 }

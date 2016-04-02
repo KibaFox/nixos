@@ -38,7 +38,6 @@ in
 
   # Fonts to include
   fonts.fonts = [
-    pkgs.corefonts # Microsoft free fonts
     pkgs.source-code-pro
     pkgs.source-sans-pro
     pkgs.source-serif-pro
@@ -53,9 +52,9 @@ in
 
   environment.systemPackages = [
     custompkgs.st
-    neopkgs.conky
-    neopkgs.dmenu         # Fast and lightweight dynamic menu for X
     pkgs.chromium
+    pkgs.conky
+    pkgs.dmenu         # Fast and lightweight dynamic menu for X
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
     pkgs.i3lock

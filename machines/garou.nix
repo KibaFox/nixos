@@ -44,7 +44,7 @@
   fileSystems."/" = {
     device = "/dev/mapper/garou1-root";
     fsType = "btrfs";
-    options = "discard,compress=lzo";
+    options = [ "discard" "compress=lzo" ];
   };
 
   fileSystems."/boot" = {
