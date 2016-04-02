@@ -46,6 +46,7 @@
     pkgs.python3
     pkgs.silver-searcher
     pkgs.tmux
+    pkgs.unzip
     pkgs.wget
     pkgs.which            # Some programs depend on this
   ];
