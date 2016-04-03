@@ -26,6 +26,10 @@
     EDITOR = "nvim";
   };
 
+  services.physlock = {
+    enable = true;
+  };
+
   environment.systemPackages = [
     pkgs.bash
     pkgs.bind             # Provides nslookup, dig
