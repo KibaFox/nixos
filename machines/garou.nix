@@ -31,8 +31,6 @@
     config.boot.kernelPackages.tp_smapi
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_4_3;
-
   boot.loader.grub.device = "/dev/sda";
 
   boot.initrd.luks.devices = [{

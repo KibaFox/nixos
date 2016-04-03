@@ -29,8 +29,6 @@
     "kvm-intel"
   ];
 
-  boot.kernelPackages = pkgs.linuxPackages_4_3;
-
   boot.loader.grub.device = "/dev/sdb";
 
   fileSystems."/" = {
