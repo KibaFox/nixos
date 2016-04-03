@@ -5,6 +5,7 @@
 {
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    ../hardware/thinkpad_t530.nix
     ../bundles/vdesktop.nix
     ../roles/redshift.nix
   ];
@@ -24,11 +25,6 @@
 
   boot.kernelModules = [
     "kvm-intel"
-    "tp_smapi"
-  ];
-
-  boot.extraModulePackages = [
-    config.boot.kernelPackages.tp_smapi
   ];
 
   boot.loader.grub.device = "/dev/sda";
@@ -53,12 +49,6 @@
   swapDevices = [
     { device = "/dev/mapper/garou1-swap"; }
   ];
-
-  hardware.trackpoint = {
-    enable = true;
-    fakeButtons = true;
-    emulateWheel = true;
-  };
 
   nixpkgs.config.allowUnfree = true;
 
