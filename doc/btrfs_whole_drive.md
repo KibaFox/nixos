@@ -17,7 +17,7 @@ Setup
 The following are commands I used to set Btrfs up on the whole drive:
 
     mkfs.btrfs -L nixos /dev/sda
-    mount -o noatime,discard,space_cache /dev/sda /mnt
+    mount -o discard,compress=lzo /dev/sda /mnt
     nixos-generate-config --root /mnt
 
     nano /etc/nixos/hardware-configuration.nix
@@ -27,7 +27,7 @@ When editing `/etc/nixos/hardware-configuration.nix` I include the following...
     fileSystems."/" = {
       device = "/dev/disk/by-label/nixos";
       fsType = "btrfs";
-      options = "noatime,discard,compress=lzo,space_cache";
+      options = [ "discard" "compress=lzo" ];
     };
 
 Then I continue with my configuration and run the NixOS install command.
