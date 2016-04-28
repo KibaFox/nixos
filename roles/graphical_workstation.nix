@@ -55,10 +55,6 @@
     pkgs.firefox
     pkgs.i3lock
     pkgs.keepassx2        # Password store
-    pkgs.dropbox-cli      # File sync
-    pkgs.firefox
-    pkgs.i3lock
-    pkgs.keepassx2        # Password store
     pkgs.maim             # Screenshot tool
     pkgs.pinta            # Drawing/editing program modeled after Paint.NET
     pkgs.sxiv             # Image viewer
