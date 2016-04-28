@@ -21,8 +21,8 @@
     };
 
     windowManager = {
-      default = "spectrwm";
-      spectrwm.enable = true;
+      default = "i3";
+      i3.enable = true;
     };
   };
 
@@ -54,6 +54,7 @@
     pkgs.dropbox-cli      # File sync
     pkgs.firefox
     pkgs.i3lock
+    pkgs.i3status
     pkgs.keepassx2        # Password store
     pkgs.maim             # Screenshot tool
     pkgs.pinta            # Drawing/editing program modeled after Paint.NET
