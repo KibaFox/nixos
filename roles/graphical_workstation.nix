@@ -57,10 +57,13 @@
     pkgs.i3status
     pkgs.keepassx2        # Password store
     pkgs.maim             # Screenshot tool
+    pkgs.mpv              # A media player that supports many video formats
     pkgs.pinta            # Drawing/editing program modeled after Paint.NET
+    pkgs.playerctl        # Command-line utility for controlling media players
     pkgs.sxiv             # Image viewer
     pkgs.xdotool          # Fake keyboard/mouse input, window management
     pkgs.xfontsel         # X11 font selection tool
+    pkgs.xorg.xbacklight  # Adjusts screen brightness
     pkgs.xsel             # Clipboard manipulation
   ];
 
