@@ -40,6 +40,7 @@
     pkgs.git              # Source control
     pkgs.htop
     pkgs.isync            # Email sync, an alternative to OfflineIMAP
+    pkgs.lsof             # Tool to list open files
     pkgs.mosh             # The mobile shell
     pkgs.neovim           # Neovim, my editor of choice
     pkgs.pandoc           # Universal document converter
