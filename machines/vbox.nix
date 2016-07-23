@@ -19,6 +19,8 @@
     "ohci_pci"
     "ehci_pci"
     "ahci"
+    "sd_mod"
+    "sr_mod"
   ];
 
   boot.loader.grub.device = "/dev/sda";
