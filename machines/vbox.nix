@@ -36,6 +36,6 @@
   # Install proprietary NVIDIA driver
   services.xserver.videoDrivers = [ "nvidia" ];
 
-  nix.maxJobs = 4;
+  nix.maxJobs = 2;
   virtualisation.virtualbox.guest.enable = true;
 }
