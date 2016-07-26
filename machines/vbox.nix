@@ -33,6 +33,9 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  # Install proprietary NVIDIA driver
+  services.xserver.videoDrivers = [ "nvidia" ];
+
   nix.maxJobs = 4;
   virtualisation.virtualbox.guest.enable = true;
 }
