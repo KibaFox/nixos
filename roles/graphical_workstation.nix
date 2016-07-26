@@ -48,7 +48,6 @@
 
   environment.systemPackages = [
     (pkgs.st.override { conf = builtins.readFile ../config/st/config.def.h; })
-    pkgs.chromium
     pkgs.conky
     pkgs.dmenu            # Fast and lightweight dynamic menu for X
     pkgs.dropbox-cli      # File sync
@@ -66,9 +65,4 @@
     pkgs.xorg.xbacklight  # Adjusts screen brightness
     pkgs.xsel             # Clipboard manipulation
   ];
-
-  nixpkgs.config.chromium = {
-    enablePepperFlash = true;       # Some sites still need flash
-    enableWideVine = true;          # Allows Netflix to be played on Linux
-  };
 }
