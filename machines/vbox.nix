@@ -31,6 +31,9 @@
     options = [ "discard" "compress=lzo" ];
   };
 
+  # Disable need for entering password into sudo
+  security.sudo.wheelNeedsPassword = false;
+
   nixpkgs.config.allowUnfree = true;
 
   # Install proprietary NVIDIA driver
