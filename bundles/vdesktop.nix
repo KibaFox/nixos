@@ -10,7 +10,7 @@
     ../roles/qute_browser.nix
     ../roles/canto_rss_user.nix
     ../roles/gocoder.nix
-    ../roles/elixir_coder.nix
+    ../roles/phoenix_coder.nix
     ../roles/pia.nix
   ];
 }
