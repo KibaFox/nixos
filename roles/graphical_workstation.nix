@@ -51,7 +51,6 @@
     pkgs.conky
     pkgs.dmenu            # Fast and lightweight dynamic menu for X
     pkgs.dropbox-cli      # File sync
-    pkgs.firefox
     pkgs.i3lock
     pkgs.i3status
     pkgs.keepassx2        # Password store
