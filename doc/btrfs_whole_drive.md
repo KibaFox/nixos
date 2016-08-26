@@ -20,9 +20,9 @@ The following are commands I used to set Btrfs up on the whole drive:
     mount -o discard,compress=lzo /dev/sda /mnt
     nixos-generate-config --root /mnt
 
-    nano /etc/nixos/hardware-configuration.nix
+    nano /mnt/etc/nixos/hardware-configuration.nix
 
-When editing `/etc/nixos/hardware-configuration.nix` I include the following...
+When editing `hardware-configuration.nix` I include the following...
 
     fileSystems."/" = {
       device = "/dev/disk/by-label/nixos";
@@ -30,17 +30,27 @@ When editing `/etc/nixos/hardware-configuration.nix` I include the following...
       options = [ "discard" "compress=lzo" ];
     };
 
-Then I continue with my configuration and run the NixOS install command.
+Next I replace the default `configuration.nix` with my own bootstrap
+configuration.
 
-    nano /etc/nixos/configuration.nix
+    curl -o /mnt/etc/nixos/configuration.nix \
+    https://raw.githubusercontent.com/KibaFox/nixos/master/bootstrap.nix
+
+Install...
+
     nixos-install
 
-Before I restart, I apply compression to the installed files like so:
+Notes
+-----
+
+ArchWiki suggests not to enable compression during installation, but does not
+explain why.  I haven't had an issue installing NixOS with compression on during
+installation.
+
+If you decide to have compression off during installation, then before you
+restart you can apply compression to the installed files like so:
 
     btrfs filesystem defragment -r -v clzo /mnt
-
-Compression isn't enabled during installation (a suggestion found on ArchWiki),
-but will be enabled after reboot.
 
 See Also
 --------
