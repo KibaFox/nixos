@@ -1,88 +1,32 @@
-# fox - Desktop Workstation
-#
-# Uses Btrfs on the whole disk for simplicity.
-# See `../doc/btrfs_whole_disk.md` for setup details.
+# fox - cloud workstation
 
-{ config, lib, pkgs, ... }:
+{ config, pkgs, ... }:
 
 {
-  imports = [
-    <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-    ../bundles/desktop.nix
-  ];
+  imports = [ <nixpkgs/nixos/modules/virtualisation/google-compute-image.nix> ];
 
   networking = {
     hostName = "fox";
   };
 
-  boot.initrd.availableKernelModules = [
-    "uhci_hcd"
-    "ehci_pci"
-    "ahci"
-    "firewire_ohci"
-    "pata_jmicron" 
-    "usb_storage"
-    "usbhid"
+  # Install minimal packages needed for provisioning
+  environment.systemPackages = with pkgs; [
+    fish
+    git
+    mosh
+    neovim
+    python
+    python3
+    tmux
   ];
 
-  boot.kernelModules = [
-    "kvm-intel"
-  ];
-
-  boot.loader.grub.device = "/dev/sdb";
-
-  fileSystems."/" = {
-    device = "/dev/disk/by-label/root";
-    fsType = "btrfs";
-    options = [
-      "ssd"
-      "noatime"
-      "discard"
-      "compress=lzo"
-      "space_cache"
+  # Create my personal user
+  users.extraUsers.kiba = {
+    description = "Kiba Fox";
+    isNormalUser = true;
+    extraGroups = [
+      "wheel"
     ];
+    uid = 1000;
   };
-
-  fileSystems."/home" = {
-    device = "/dev/disk/by-label/hdd";
-    fsType = "btrfs";
-    options = [
-      "subvol=/home"
-      "noatime"
-      "discard"
-      "compress=lzo"
-      "space_cache"
-    ];
-  };
-
-  fileSystems."/var" = {
-    device = "/dev/disk/by-label/hdd";
-    fsType = "btrfs";
-    options = [
-      "subvol=/var"
-      "noatime"
-      "discard"
-      "compress=lzo"
-      "space_cache"
-    ];
-  };
-
-  fileSystems."/tmp" = {
-    device = "/dev/disk/by-label/hdd";
-    fsType = "btrfs";
-    options = [
-      "subvol=/tmp"
-      "noatime"
-      "discard"
-      "compress=lzo"
-      "space_cache"
-    ];
-  };
-
-  # Install proprietary NVIDIA driver
-  services.xserver.videoDrivers = [ "nvidia" ];
-
-  nixpkgs.config.allowUnfree = true;
-
-  nix.maxJobs = 8;
 }
