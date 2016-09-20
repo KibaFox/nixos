@@ -11,13 +11,16 @@
 
   # Install minimal packages needed for provisioning
   environment.systemPackages = with pkgs; [
+    emacs24-nox
     fish
     git
+    gnupg
     mosh
     neovim
     python
     python3
     tmux
+    vimNox
   ];
 
   # Create my personal user
