@@ -11,6 +11,10 @@
 
   # Install minimal packages needed for provisioning
   environment.systemPackages = with pkgs; [
+    (gnupg.override {
+      pinentry = pinentry_ncurses;
+      x11Support = false;
+    })
     emacs24-nox
     fish
     git
