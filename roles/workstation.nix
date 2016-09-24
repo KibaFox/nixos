@@ -30,29 +30,33 @@
     enable = true;
   };
 
-  environment.systemPackages = [
-    pkgs.bash
-    pkgs.bind             # Provides nslookup, dig
-    pkgs.ctags
-    pkgs.curl
-    pkgs.dos2unix         # Convert between dos and unix line endings
-    pkgs.fish
-    pkgs.git              # Source control
-    pkgs.htop
-    pkgs.isync            # Email sync, an alternative to OfflineIMAP
-    pkgs.lsof             # Tool to list open files
-    pkgs.mosh             # The mobile shell
-    pkgs.neovim           # Neovim, my editor of choice
-    pkgs.pandoc           # Universal document converter
-    pkgs.pngnq            # Lossy PNG compressor
-    pkgs.psmisc           # includes killall
-    pkgs.pwgen            # Password generator
-    pkgs.python
-    pkgs.python3
-    pkgs.silver-searcher
-    pkgs.tmux
-    pkgs.unzip
-    pkgs.wget
-    pkgs.which            # Some programs depend on this
+  environment.systemPackages = with pkgs; [
+    (gnupg.override {
+      pinentry = pinentry_ncurses;
+      x11Support = false;
+    })
+    bash
+    bind            # Provides nslookup, dig
+    ctags
+    curl
+    dos2unix        # Convert between dos and unix line endings
+    fish
+    git             # Source control
+    htop
+    isync           # Email sync, an alternative to OfflineIMAP
+    lsof            # Tool to list open files
+    mosh            # The mobile shell
+    neovim          # Neovim, my editor of choice
+    pandoc          # Universal document converter
+    pngnq           # Lossy PNG compressor
+    psmisc          # includes killall
+    pwgen           # Password generator
+    python
+    python3
+    silver-searcher
+    tmux
+    unzip
+    wget
+    which           # Some programs depend on this
   ];
 }
