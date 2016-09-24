@@ -107,8 +107,8 @@ Next, we format the filesystems on each logical volume:
 
 Now, mount the filesystems:
 
-    mount -o discard,compress=lzo /dev/mapper/MyVol-root /mnt
-    swapon /dev/mapper/MyVol-swap
+    mount -o discard,compress=lzo /dev/mapper/hostname1-root /mnt
+    swapon /dev/mapper/hostname1-swap
 
 Create an *Ext2* filesystem on the partition intended for /boot. Any filesystem
 that can be read by the bootloader is usable, but this keeps it simple.
