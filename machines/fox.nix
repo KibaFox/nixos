@@ -9,22 +9,17 @@
     hostName = "fox";
   };
 
-  # Install minimal packages needed for provisioning
+  # Turn off support for X11
+  environment.noXlibs = true;
+
+  # Install minimal set of packages
+  # Users can install more with nix-env
   environment.systemPackages = with pkgs; [
-    (gnupg.override {
-      pinentry = pinentry_ncurses;
-      x11Support = false;
-    })
-    emacs24-nox
-    fish
     git
-    gnupg
     mosh
     neovim
     python
-    python3
     tmux
-    vimNox
   ];
 
   # Create my personal user
