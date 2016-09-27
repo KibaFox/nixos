@@ -22,6 +22,15 @@
     tmux
   ];
 
+  # Shells available to users
+  environment.shells = [
+    "/run/current-system/sw/bin/bash"
+    "/run/current-system/sw/bin/fish"
+  ];
+
+  # Enable fish with correct system environment
+  programs.fish.enable = true;
+
   # Create my personal user
   users.extraUsers.kiba = {
     description = "Kiba Fox";
