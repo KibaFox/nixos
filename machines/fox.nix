@@ -28,6 +28,11 @@
     "/run/current-system/sw/bin/fish"
   ];
 
+  # Shell aliases (for all shells)
+  environment.shellAliases = {
+    vim = "nvim"; # Use neovim instead of vim
+  };
+
   # Enable fish with correct system environment
   programs.fish.enable = true;
 
