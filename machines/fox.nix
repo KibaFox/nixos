@@ -35,6 +35,7 @@
   users.extraUsers.kiba = {
     description = "Kiba Fox";
     isNormalUser = true;
+    shell = "/run/current-system/sw/bin/fish"; # Make fish my default shell
     extraGroups = [
       "wheel"
     ];
