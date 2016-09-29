@@ -4,21 +4,6 @@
 { config, pkgs, ... }:
 
 {
-  users.extraUsers.kiba = {
-    description = "Kiba Fox";
-    isNormalUser = true;
-    extraGroups = [
-      "wheel"
-    ];
-    uid = 1000;
-  };
-
-  i18n = {
-    consoleFont = "Lat2-Terminus16";
-    consoleKeyMap = "us";
-    defaultLocale = "en_US.UTF-8";
-  };
-
   # Automatically upgrade for easier maintenance
   system.autoUpgrade.enable = true;
 
@@ -26,37 +11,31 @@
     EDITOR = "nvim";
   };
 
-  services.physlock = {
-    enable = true;
+  # Enable fish with correct system environment
+  programs.fish.enable = true;
+
+  # Clear default shell aliases
+  programs.bash.shellAliases = {};
+  programs.fish.shellAliases = {};
+
+  # Shell aliases (for all shells)
+  environment.shellAliases = {
+    vim = "nvim"; # Use neovim instead of vim
   };
 
+  # Shells available to users
+  environment.shells = [
+    "/run/current-system/sw/bin/bash"
+    "/run/current-system/sw/bin/fish"
+  ];
+
+  # Install minimal set of packages
+  # Users can install more with nix-env
   environment.systemPackages = with pkgs; [
-    (gnupg.override {
-      pinentry = pinentry_ncurses;
-      x11Support = false;
-    })
-    bash
-    bind            # Provides nslookup, dig
-    ctags
-    curl
-    dos2unix        # Convert between dos and unix line endings
-    fish
-    git             # Source control
-    htop
-    isync           # Email sync, an alternative to OfflineIMAP
-    lsof            # Tool to list open files
-    mosh            # The mobile shell
-    neovim          # Neovim, my editor of choice
-    pandoc          # Universal document converter
-    pngnq           # Lossy PNG compressor
-    psmisc          # includes killall
-    pwgen           # Password generator
+    git
+    mosh
+    neovim
     python
-    python3
-    silver-searcher
     tmux
-    unzip
-    wget
-    which           # Some programs depend on this
   ];
 }

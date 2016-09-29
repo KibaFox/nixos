@@ -5,9 +5,14 @@
 {
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    ../common.nix
     ../hardware/thinkpad_t530.nix
-    ../bundles/vdesktop.nix
+    ../roles/graphical_workstation.nix
+    ../roles/physical_machine.nix
+    ../roles/qute_browser.nix
     ../roles/redshift.nix
+    ../roles/workstation.nix
+    ../users/kiba.nix
   ];
 
   networking = {
