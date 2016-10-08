@@ -29,6 +29,23 @@
     "/run/current-system/sw/bin/fish"
   ];
 
+  programs.tmux = {
+    enable        = true;
+    baseIndex     = 1;    # Match window index order with keyboard
+    escapeTime    = 10;   # Prevent delay when switching modes w/ ESC in NeoVim
+    historyLimit  = 5000; # Increase default history limit
+    keyMode       = "vi"; # Use vi style shortcuts
+    newSession    = true; # Create a new session if there isn't one to attach
+    terminal      = "tmux-256color";
+    extraTmuxConf = ''
+      # Use vim motion keys to move between panes
+      bind h select-pane -L
+      bind j select-pane -D
+      bind k select-pane -U
+      bind l select-pane -R
+    '';
+  };
+
   # Install minimal set of packages
   # Users can install more with nix-env
   environment.systemPackages = with pkgs; [
@@ -36,6 +53,5 @@
     mosh
     neovim
     python
-    tmux
   ];
 }
