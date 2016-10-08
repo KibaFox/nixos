@@ -10,9 +10,13 @@
     ../bundles/vdesktop.nix
   ];
 
+  system.stateVersion = "16.03";
+
   networking = {
     hostName = "vbox";
   };
+
+  time.timeZone = "America/New_York";
 
   boot.initrd.availableKernelModules = [
     "ata_piix"

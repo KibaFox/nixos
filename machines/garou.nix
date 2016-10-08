@@ -5,7 +5,6 @@
 {
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
-    ../common.nix
     ../hardware/thinkpad_t530.nix
     ../roles/graphical_workstation.nix
     ../roles/physical_machine.nix
@@ -15,10 +14,14 @@
     ../users/kiba.nix
   ];
 
+  system.stateVersion = "16.03";
+
   networking = {
     hostName = "garou";
     wireless.enable = true;
   };
+
+  time.timeZone = "America/New_York";
 
   boot.initrd.availableKernelModules = [
     "xhci_pci"
