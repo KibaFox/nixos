@@ -7,7 +7,13 @@
 
 {
   imports = [
-    ../bundles/vdesktop.nix
+    ../roles/workstation.nix
+    ../roles/graphical_workstation.nix
+    ../roles/qute_browser.nix
+    ../roles/canto_rss_user.nix
+    ../roles/gocoder.nix
+    ../roles/phoenix_coder.nix
+    ../roles/pia.nix
   ];
 
   system.stateVersion = "16.03";
