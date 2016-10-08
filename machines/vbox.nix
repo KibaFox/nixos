@@ -16,7 +16,7 @@
     ../roles/pia.nix
   ];
 
-  system.stateVersion = "16.03";
+  system.stateVersion = "16.09";
 
   networking = {
     hostName = "vbox";
