@@ -58,6 +58,11 @@
     { device = "/dev/mapper/garou1-swap"; }
   ];
 
+  # Set first monitor as primary display
+  services.xserver.monitorSection = ''
+    Option "Primary" "true"
+  '';
+
   nixpkgs.config.allowUnfree = true;
 
   nix.maxJobs = 4;
