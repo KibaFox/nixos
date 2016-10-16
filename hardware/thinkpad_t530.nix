@@ -36,6 +36,9 @@
     emulateWheel = true; # Hold middle mouse button for wheel
   };
 
+  # Enable light to control the backlight of the screen
+  programs.light.enable = true;
+
   # NVIDIA Optimus support via Bumblebee
   # Disabled since this causes shutdowns to hang
   #hardware.bumblebee.enable = true;
