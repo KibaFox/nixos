@@ -10,6 +10,7 @@
     ../roles/physical_machine.nix
     ../roles/qute_browser.nix
     ../roles/redshift.nix
+    ../roles/wine_user.nix
     ../roles/workstation.nix
     ../users/kiba.nix
   ];
