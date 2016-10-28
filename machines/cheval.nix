@@ -67,6 +67,14 @@
     { device = "/dev/mapper/cheval1-swap"; }
   ];
 
+  # Set primary display
+  services.xserver.displayManager.sessionCommands = ''
+    xrandr --output DVI-I-1 --primary
+  '';
+
+  # Enable nvidia drivers
+  services.xserver.videoDrivers = [ "nvidia" ];
+
   nixpkgs.config.allowUnfree = true;
 
   nix.maxJobs = lib.mkDefault 8;
