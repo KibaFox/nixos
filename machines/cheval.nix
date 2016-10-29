@@ -6,6 +6,7 @@
 {
   imports = [
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
+    #../hardware/pulseaudio.nix
     ../roles/graphical_workstation.nix
     ../roles/physical_machine.nix
     ../roles/qute_browser.nix
@@ -66,6 +67,12 @@
   swapDevices = [
     { device = "/dev/mapper/cheval1-swap"; }
   ];
+
+  # Default to using headset w/ USB sound card
+  sound.extraConfig = ''
+    defaults.pcm.!card 2
+    defaults.ctl.!card 2
+  '';
 
   # Set primary display
   services.xserver.displayManager.sessionCommands = ''
