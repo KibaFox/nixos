@@ -23,6 +23,7 @@
     "i915.i915_enable_fbc=1"
     "i915.lvds_downclock=1"
     "i915.semaphores=1"
+    "rcutree.rcu_idle_gp_delay=1"
   ];
 
   services.thinkfan = {
@@ -40,6 +41,18 @@
   programs.light.enable = true;
 
   # NVIDIA Optimus support via Bumblebee
-  # Disabled since this causes shutdowns to hang
-  #hardware.bumblebee.enable = true;
+  hardware.bumblebee.enable = true;
+  hardware.bumblebee.connectDisplay = true;
+  #hardware.bumblebee.driver = "nouveau";
+
+  # Attempt to fix (does not work, however):
+  # /dev/dri/card0: failed to set DRM interface version 1.4: Permission denied
+  services.xserver.config = ''
+    Section "Screen"
+      Identifier "Default Screen"
+      Device "DiscreteNvidia"
+    EndSection
+  '';
+
+  hardware.opengl.driSupport32Bit = true;
 }
