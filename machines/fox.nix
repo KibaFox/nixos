@@ -19,4 +19,12 @@
 
   # Turn off support for X11
   environment.noXlibs = true;
+
+  # Enable swapfile
+  swapDevices = [
+    {
+      device = "/var/swapfile";
+      size = 1024;
+    }
+  ];
 }
