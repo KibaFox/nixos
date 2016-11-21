@@ -7,7 +7,7 @@
 
   environment.systemPackages = [
     pkgs.elixir
-    pkgs.nodejs-5_x
+    pkgs.nodejs-6_x
     pkgs.inotify-tools
 
     # To compile dependencies

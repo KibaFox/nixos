@@ -7,6 +7,7 @@
     <nixpkgs/nixos/modules/installer/scan/not-detected.nix>
     ../hardware/thinkpad_t530.nix
     ../roles/graphical_workstation.nix
+    ../roles/phoenix_coder.nix
     ../roles/physical_machine.nix
     ../roles/qute_browser.nix
     ../roles/redshift.nix
